@@ -3,116 +3,113 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OmniGaia</title>
+  <title>OmniGaia — Save Nature. Save Future.</title>
 
-  <!-- Inter font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- SEO / Social -->
+  <meta name="description" content="OmniGaia — virtual presence to protect real nature. Less travel, less waste, more access. Open pilots, transparent impact."/>
+  <meta property="og:title" content="OmniGaia — Save Nature. Save Future."/>
+  <meta property="og:description" content="Virtual presence → real ecological impact. Explore mission, pilots and join the movement."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
+  <!-- Favicon (inline SVG) -->
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%23131519"/><circle cx="32" cy="32" r="18" fill="%232ea06b"/><text x="32" y="38" font-size="20" text-anchor="middle" fill="white" font-family="Arial">O</text></svg>'>
 
   <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"OmniGaia",
+    "url":"https://YOUR-USER.github.io/omnigaia-site/",
+    "sameAs":["https://instagram.com/omnigaia","https://x.com/omnigaia","https://t.me/omnigaia","https://facebook.com/omnigaia","https://linkedin.com/company/omnigaia","https://youtube.com/@omnigaia"]
+  }
+  </script>
 </head>
 <body>
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#">OmniGaia</a>
-      <button class="hamburger" aria-label="menu" onclick="document.body.classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="brand" href="index.html">OmniGaia</a>
+      <button class="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
       <div class="links">
-        <a href="#mission">Mission</a>
-        <a href="#areas">Focus</a>
-        <a href="#updates">Updates</a>
-        <a href="#contact" class="btn small">Get Involved</a>
+        <a href="mission.html">Mission</a>
+        <a href="pilots.html">Pilots</a>
+        <a class="btn small" href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
-    <div class="hero-bg"></div>
+  <header class="hero hero--with-image" style="--hero:url('https://images.unsplash.com/photo-1520975922284-0444a99c5014?auto=format&fit=crop&w=2000&q=80')">
+    <div class="hero-overlay"></div>
     <div class="container hero-inner">
       <p class="tag">Future • Ecology • VR</p>
-      <h1><span class="accent">OmniGaia</span> — The Future of a Greener World</h1>
-      <p class="lead">A visionary project using virtual worlds to preserve real nature. Less travel, less waste, more impact.</p>
+      <h1>Save Nature. <span class="accent">Save Future.</span></h1>
+      <p class="lead">Virtual presence that cuts emissions and waste. Learn, work and celebrate with a lighter footprint.</p>
       <div class="cta">
-        <a class="btn primary" href="#contact">Join the Mission</a>
-        <a class="btn ghost" target="_blank" href="https://github.com/w66w-2025/omnigaia-site">View on GitHub</a>
+        <a class="btn primary" href="mission.html">Explore Mission</a>
+        <a class="btn ghost" href="pilots.html">View Pilots</a>
       </div>
+      <div class="hero-metrics">
+        <div><strong>3</strong><span>Focus Areas</span></div>
+        <div><strong>0.0t</strong><span>CO₂ Saved*</span></div>
+        <div><strong>100%</strong><span>Open & Free</span></div>
+      </div>
+      <small class="note">*Replace with real metrics after pilots.</small>
     </div>
   </header>
 
-  <!-- MISSION -->
-  <section id="mission" class="section">
-    <div class="container grid-2">
-      <div class="copy">
-        <h2>Our Mission</h2>
-        <p>OmniGaia is about rethinking how humans live, learn, and connect — in ways that protect our planet. By transitioning into virtual presence, we cut down CO₂, save time, and open access for everyone.</p>
-        <ul class="bullets">
-          <li>🌍 Eco-first innovation</li>
-          <li>🚀 Virtual-first collaboration</li>
-          <li>🤝 Open & inclusive for all</li>
-        </ul>
-      </div>
-      <div class="card glass">
-        <h3>Why It Matters</h3>
-        <p>Climate crisis demands bold solutions. Technology can be a lifeline — OmniGaia unites VR, AI, and community power to make a measurable difference.</p>
-      </div>
+  <!-- VALUE STRIP -->
+  <section class="strip">
+    <div class="container strip-inner">
+      <div>Open pilots</div><div>Transparent metrics</div><div>Community-first</div><div>Design excellence</div>
     </div>
   </section>
 
-  <!-- FOCUS -->
-  <section id="areas" class="section muted">
+  <!-- FOCUS CARDS -->
+  <section class="section muted">
     <div class="container">
       <h2>Focus Areas</h2>
       <div class="cards">
-        <div class="card"><h3>Education</h3><p>Immersive learning without borders or waste.</p></div>
-        <div class="card"><h3>Events</h3><p>Concerts & conferences with near-zero travel.</p></div>
-        <div class="card"><h3>Research</h3><p>Global studies proving real ecological savings.</p></div>
+        <a class="card link-card" href="mission.html#strategy">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1542228262-3d663b306a55?auto=format&fit=crop&w=900&q=60" alt="Education"/>
+          <h3>Education</h3>
+          <p>Immersive learning that reduces commutes and waste while expanding access.</p>
+        </a>
+        <a class="card link-card" href="mission.html#events">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1484820547813-ce23e9a1a2b6?auto=format&fit=crop&w=900&q=60" alt="Events"/>
+          <h3>Events</h3>
+          <p>Conferences & concerts with near-zero travel emissions via virtual venues.</p>
+        </a>
+        <a class="card link-card" href="mission.html#research">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=60" alt="Research"/>
+          <h3>Research</h3>
+          <p>Open studies and dashboards that measure true ecological impact.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- UPDATES -->
-  <section id="updates" class="section">
+  <!-- CTA -->
+  <section class="section callout">
     <div class="container">
-      <h2>Latest Updates</h2>
-      <div class="updates">
-        <article class="update"><time>2025 Q1</time><h4>Roadmap Published</h4><p>Our first open roadmap is now live.</p></article>
-        <article class="update"><time>2025 Q2</time><h4>First Pilot</h4><p>Remote VR learning sessions start with impact tracking.</p></article>
+      <h2>Be an early partner</h2>
+      <p>Universities, NGOs, creators — help design pilots and publish open results.</p>
+      <div class="cta">
+        <a class="btn primary" href="contact.html">Get in touch</a>
+        <a class="btn" href="mission.html">Read the strategy</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section callout">
-    <div class="container">
-      <h2>Connect with OmniGaia</h2>
-      <p>Follow us on social platforms (coming soon, links can be updated later).</p>
-      <div class="cta social-links">
-        <a class="btn" target="_blank" href="https://instagram.com/omnigaia">Instagram</a>
-        <a class="btn" target="_blank" href="https://t.me/omnigaia">Telegram</a>
-        <a class="btn" target="_blank" href="https://x.com/omnigaia">X (Twitter)</a>
-        <a class="btn" target="_blank" href="https://facebook.com/omnigaia">Facebook</a>
-        <a class="btn" target="_blank" href="https://linkedin.com/company/omnigaia">LinkedIn</a>
-        <a class="btn" target="_blank" href="https://youtube.com/@omnigaia">YouTube</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">© 2025 OmniGaia — Built free on GitHub Pages. Designed with passion ✨</div>
-  </footer>
-
-  <script>
-    document.querySelectorAll('.links a').forEach(a=>{
-      a.addEventListener('click',()=>document.body.classList.remove('open'));
-    });
-  </script>
+  <footer class="footer"><div class="container">© 2025 OmniGaia — Built free on GitHub Pages • Images: Unsplash</div></footer>
 </body>
-                                                           </html>
+            </html>
