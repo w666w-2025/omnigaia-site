@@ -1,108 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OmniGaia — Save Nature. Save Future.</title>
 
   <!-- SEO / Social -->
-  <meta name="description" content="OmniGaia — virtual presence to protect real nature. Less travel, less waste, more access. Open pilots, transparent impact."/>
-  <meta property="og:title" content="OmniGaia — Save Nature. Save Future."/>
-  <meta property="og:description" content="Virtual presence → real ecological impact. Explore mission, pilots and join the movement."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"/>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Favicon (inline SVG) -->
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%23131519"/><circle cx="32" cy="32" r="18" fill="%232ea06b"/><text x="32" y="38" font-size="20" text-anchor="middle" fill="white" font-family="Arial">O</text></svg>'>
-
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"OmniGaia",
-    "url":"https://YOUR-USER.github.io/omnigaia-site/",
-    "sameAs":["https://instagram.com/omnigaia","https://x.com/omnigaia","https://t.me/omnigaia","https://facebook.com/omnigaia","https://linkedin.com/company/omnigaia","https://youtube.com/@omnigaia"]
-  }
-  </script>
+  <meta name="description" content="OmniGaia: Virtual-first experiences to cut emissions while keeping quality high. Open, transparent, and community-first." />
+  <meta property="og:title" content="OmniGaia — Save Nature. Save Future." />
+  <meta property="og:description" content="Virtual-first experiences that reduce emissions without sacrificing quality." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* optional: small shadow when scrolled */
+    .nav.scrolled{ box-shadow:0 8px 30px rgba(0,0,0,.25) }
+  </style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
+
+  <!-- ===== Top Navigation ===== -->
+  <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">OmniGaia</a>
-      <button class="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
-      <div class="links">
+      <a class="brand" href="index.html">
+        <span class="dot" aria-hidden="true"></span> OmniGaia
+      </a>
+
+      <nav class="links">
+        <a class="active" href="index.html">Home</a>
         <a href="mission.html">Mission</a>
         <a href="pilots.html">Pilots</a>
-        <a class="btn small" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-  <!-- HERO -->
-  <header class="hero hero--with-image" style="--hero:url('https://images.unsplash.com/photo-1520975922284-0444a99c5014?auto=format&fit=crop&w=2000&q=80')">
-    <div class="hero-overlay"></div>
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Fullscreen Overlay Menu ===== -->
+  <div id="menu" class="menu-overlay" aria-hidden="true">
+    <button class="menu-close" aria-label="Close menu">✕</button>
+    <nav class="menu-nav" role="navigation" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="mission.html">Mission</a>
+      <a href="pilots.html">Pilots</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
     <div class="container hero-inner">
       <p class="tag">Future • Ecology • VR</p>
       <h1>Save Nature. <span class="accent">Save Future.</span></h1>
-      <p class="lead">Virtual presence that cuts emissions and waste. Learn, work and celebrate with a lighter footprint.</p>
+      <p class="lead">
+        Virtual-first experiences that cut emissions without sacrificing
+        quality. Transparent metrics, open results, community-first.
+      </p>
       <div class="cta">
         <a class="btn primary" href="mission.html">Explore Mission</a>
         <a class="btn ghost" href="pilots.html">View Pilots</a>
       </div>
+
       <div class="hero-metrics">
-        <div><strong>3</strong><span>Focus Areas</span></div>
-        <div><strong>0.0t</strong><span>CO₂ Saved*</span></div>
-        <div><strong>100%</strong><span>Open & Free</span></div>
+        <div><strong class="count" data-target="3">0</strong><span> Focus Areas</span></div>
+        <div><strong class="count" data-target="1200">0</strong><span> CO₂ t avoided*</span></div>
+        <div><strong class="count" data-target="100">0</strong><span>% Open & Free</span></div>
       </div>
-      <small class="note">*Replace with real metrics after pilots.</small>
+      <small class="note">*Illustrative; replace with real metrics after pilots.</small>
     </div>
   </header>
 
-  <!-- VALUE STRIP -->
+  <!-- ===== Feature Strip ===== -->
   <section class="strip">
     <div class="container strip-inner">
-      <div>Open pilots</div><div>Transparent metrics</div><div>Community-first</div><div>Design excellence</div>
+      <div>Pilots</div>
+      <div>Transparent metrics</div>
+      <div>Community-first</div>
+      <div>Open & Free</div>
     </div>
   </section>
 
-  <!-- FOCUS CARDS -->
-  <section class="section muted">
+  <!-- ===== Focus Areas (Cards) ===== -->
+  <section class="section reveal" id="focus">
     <div class="container">
       <h2>Focus Areas</h2>
+      <p class="lead">Three tracks to maximize impact with minimal footprint.</p>
+
       <div class="cards">
-        <a class="card link-card" href="mission.html#strategy">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1542228262-3d663b306a55?auto=format&fit=crop&w=900&q=60" alt="Education"/>
+        <article class="card">
+          <img data-src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=1600" alt="Education" />
           <h3>Education</h3>
-          <p>Immersive learning that reduces commutes and waste while expanding access.</p>
-        </a>
-        <a class="card link-card" href="mission.html#events">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1484820547813-ce23e9a1a2b6?auto=format&fit=crop&w=900&q=60" alt="Events"/>
+          <p>Open courses and VR classrooms that reduce travel and waste while increasing access.</p>
+          <a class="btn small" href="mission.html#education">Learn more</a>
+        </article>
+
+        <article class="card">
+          <img data-src="https://images.unsplash.com/photo-1515165562835-c4c5bdbd2d79?q=80&w=1600" alt="Events" />
           <h3>Events</h3>
-          <p>Conferences & concerts with near-zero travel emissions via virtual venues.</p>
-        </a>
-        <a class="card link-card" href="mission.html#research">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=60" alt="Research"/>
+          <p>Conferences & concerts hosted virtually to approach near-zero travel emissions.</p>
+          <a class="btn small" href="mission.html#events">Learn more</a>
+        </article>
+
+        <article class="card">
+          <img data-src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600" alt="Research" />
           <h3>Research</h3>
-          <p>Open studies and dashboards that measure true ecological impact.</p>
-        </a>
+          <p>Open studies and dashboards that measure true ecological impact and publish results.</p>
+          <a class="btn small" href="mission.html#research">Learn more</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section callout">
+  <!-- ===== Impact ===== -->
+  <section class="section reveal" id="impact">
+    <div class="container">
+      <h2>Impact (2025 Targets)</h2>
+      <div class="impact-grid">
+        <div class="impact">
+          <div class="impact-number count" data-target="50000">0</div>
+          <div class="impact-label">virtual attendees</div>
+        </div>
+        <div class="impact">
+          <div class="impact-number count" data-target="1200">0</div>
+          <div class="impact-label">tons CO₂ avoided</div>
+        </div>
+        <div class="impact">
+          <div class="impact-number">100%</div>
+          <div class="impact-label">open results</div>
+        </div>
+      </div>
+      <p class="muted-note">All figures will be verified and published with methodology.</p>
+    </div>
+  </section>
+
+  <!-- ===== Early Partner CTA ===== -->
+  <section class="section reveal" id="partners">
     <div class="container">
       <h2>Be an early partner</h2>
-      <p>Universities, NGOs, creators — help design pilots and publish open results.</p>
+      <p class="lead">Universities, NGOs, creators — help design pilots and publish open results.</p>
       <div class="cta">
         <a class="btn primary" href="contact.html">Get in touch</a>
         <a class="btn" href="mission.html">Read the strategy</a>
@@ -110,6 +149,28 @@
     </div>
   </section>
 
-  <footer class="footer"><div class="container">© 2025 OmniGaia — Built free on GitHub Pages • Images: Unsplash</div></footer>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 OmniGaia — Built free on GitHub Pages • Images: Unsplash</p>
+      <p>
+        <!-- ijtimoiy tarmoqlarni keyin shu yerga kiritasiz -->
+        <a href="#" id="ig" aria-label="Instagram">Instagram</a> ·
+        <a href="#" id="tg" aria-label="Telegram">Telegram</a> ·
+        <a href="#" id="x" aria-label="X">X</a> ·
+        <a href="#" id="fb" aria-label="Facebook">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <script>
+    /* placeholder: social linksni keyin almashtirasiz */
+    document.getElementById('ig').href = '#';
+    document.getElementById('tg').href = '#';
+    document.getElementById('x').href  = '#';
+    document.getElementById('fb').href = '#';
+  </script>
 </body>
-            </html>
+  </html>
